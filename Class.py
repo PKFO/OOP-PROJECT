@@ -1,5 +1,6 @@
+from enum import Enum
 class dealer:
-    def __init__(self, Dealer_Name, Office_hours, Area, Out_of_time, payment_info, insurerance, other, description, category, Review):
+    def __init__(self, Dealer_Name, Office_hours, Area, Out_of_time, payment_info, insurerance, other, description, category, Review, profile_image):
         self._Dealer_Name = Dealer_Name
         self._Office_hours = Office_hours
         self._Area = Area
@@ -10,6 +11,7 @@ class dealer:
         self._description = description
         self._category = category
         self._Review = Review
+        self._profile_image = profile_image
 
 class CarCategory:
     def __init__(self, car_with_driver, self_drive):
@@ -31,13 +33,12 @@ class Car:
         self.Car_status = Car_status
         
 class Account:
-    def __init__(self, username, name, surname, birthdate, email, tel):
+    def __init__(self, username, name, birth_date, profile_image, password):
         self.username = username
+        self.password = password
         self.name = name
-        self.surname = surname
-        self.birthdate = birthdate 
-        self.email = email
-        self.tel = tel
+        self.birthdate = birth_date 
+        self.profile_image = profile_image
 
 class Booking:
     def __init__(self, First_Date, Last_Date, BookingStatus, price_added_on):
@@ -71,4 +72,3 @@ class review:
         self.accuracy = accuracy
         self.recommendation = recommendation
         self.comment = comment
-  
