@@ -1,5 +1,6 @@
+from enum import Enum
 class dealer:
-    def __init__(self, Dealer_Name, Office_hours, Area, Out_of_time, payment_info, insurerance, other, description, category, Review):
+    def __init__(self, Dealer_Name, Office_hours, Area, Out_of_time, payment_info, insurerance, other, description, category, Review, profile_image):
         self._Dealer_Name = Dealer_Name
         self._Office_hours = Office_hours
         self._Area = Area
@@ -10,24 +11,7 @@ class dealer:
         self._description = description
         self._category = category
         self._Review = Review
-    
-    def Create_car():
-        pass
-
-    def edit_car():
-        pass
-
-    def remove_car(self):
-        pass
-
-    def request_system():
-        pass
-
-    def update_account():
-        pass
-
-    def modify_dealer():
-        pass
+        self._profile_image = profile_image
 
 class CarCategory:
     def __init__(self, car_with_driver, self_drive):
@@ -47,21 +31,14 @@ class Car:
         self.Small_bag = Small_bag
         self.passenger = passenger
         self.Car_status = Car_status
-
-    def check_car(self,car_status):
-        pass
         
 class Account:
-    def __init__(self, username, name, surname, birthdate, email, tel):
+    def __init__(self, username, name, birth_date, profile_image, password):
         self.username = username
+        self.password = password
         self.name = name
-        self.surname = surname
-        self.birthdate = birthdate 
-        self.email = email
-        self.tel = tel
-    
-    def check_info():
-        pass
+        self.birthdate = birth_date 
+        self.profile_image = profile_image
 
 class Booking:
     def __init__(self, First_Date, Last_Date, BookingStatus, price_added_on):
@@ -70,11 +47,6 @@ class Booking:
         self.BookingStatus = BookingStatus
         self.price_added_on = price_added_on
 
-    def get_LocationTime(self):
-        pass
-
-    def update_bookingstatus(self,start_date,end_date):
-        pass
 
 class Region:
     def __init__(self, Region_TH, Province, Place):
@@ -86,9 +58,6 @@ class location:
     def __init__(self, get_car, return_car) -> None:
         self.get_car = get_car
         self.return_car = return_car
-
-    def search_car():
-        pass
 
 class promotion:
     def __init__(self, promotion_list, special_price):
@@ -102,4 +71,8 @@ class review:
         self.service = service
         self.accuracy = accuracy
         self.recommendation = recommendation
+<<<<<<< HEAD
         self.comment = comment
+=======
+        self.comment = comment
+>>>>>>> main
