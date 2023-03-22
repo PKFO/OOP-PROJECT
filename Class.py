@@ -88,10 +88,9 @@ class Booking:
         self.__Last_Date = Last_Date
         self.__BookingStatus = BookingStatus
         self.__price_added_on = price_added_on
-
+        
     def update_bookingstatus(self,First_date,Last_date):
         pass
-
 
 class Region:
     def __init__(self, Region_TH, Province, Place):
